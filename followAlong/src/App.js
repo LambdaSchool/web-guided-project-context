@@ -8,14 +8,13 @@ import "./styles.scss";
 import FamilyContext from "./contexts/FamilyContext";
 
 export default function App() {
-
   const initialState = {
     families: data,
     activeFamily: families[0]
   };
-  
-  const [families] = useState(data);
-  const [state, dispatch] = useReducer(familyReducer, families[0]);
+
+  // const [families] = useState(data);
+  const [state, dispatch] = useReducer(familyReducer, initialState);
   // const [activeFamily, setActiveFamily] = useState(families[0]);
 
   // Step 2: Provide the contenxt by wrapping Context.Provider around the subtree of components (aka the context) in which this shared state is relevant
@@ -24,7 +23,7 @@ export default function App() {
       <FamilyContext.Provider value={{activeFamily, families}}>
       <section className="header">
         <h1>Family Trees</h1>
-        {families.map(d => (
+        {state.families.map(d => (
           <FamilyButton key={d.familyName} family={d} />
         ))}
       </section>
