@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useReducer } from "react";
 import FamilyButton from "./components/FamilyButton";
 import { data } from "./data";
 import familyReducer from "./reducers";
@@ -10,7 +10,7 @@ import FamilyContext from "./contexts/FamilyContext";
 export default function App() {
   const initialState = {
     families: data,
-    activeFamily: families[0]
+    activeFamily: data[0]
   };
 
   // const [families] = useState(data);
