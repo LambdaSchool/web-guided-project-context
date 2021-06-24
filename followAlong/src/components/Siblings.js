@@ -9,10 +9,12 @@ class Siblings extends React.Component {
           {family => (
             {
               family.siblings.map((p) => (
+                <>
                 <div className="person" key={p.name}>
                   <img width="150" src={p.img} alt={p.name} />
                   <strong>{p.name}</strong>
-                </div>
+                  </div>
+                </>
               ))
             }
         )
@@ -24,3 +26,5 @@ class Siblings extends React.Component {
 };
 
 export default Siblings;
+
+// Render props pattern: pull the value from the context with Context.Consumer and use that value in order to remder a bit of JSX
