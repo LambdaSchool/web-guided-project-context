@@ -12,6 +12,7 @@ export default function App() {
 
   console.log("What is a Context?", FamilyContext);
 
+  // Step 2: Provide the contenxt by wrapping Context.Provider around the subtree of components (aka the context) in which this shared state is relevant
   return (
     <div className="App">
       <FamilyContext.Provider>
