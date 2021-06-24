@@ -8,7 +8,7 @@ import Siblings from "./Siblings";
 // (this is similar to what we do with connect or React Redux hooks)
 
 export default function FamilyTree(props) {
-  const { activeFamily } = useContext(FamilyContext);
+  const { activeFamily } = useContext(FamilyContext).state;
   return (
     <section className="FamilyTree">
       <h1>{activeFamily.familyName}</h1>
