@@ -11,7 +11,7 @@ export default function FamilyTree(props) {
   const { activeFamily } = useContext(FamilyContext);
   return (
     <section className="FamilyTree">
-      <h1>{family.familyName}</h1>
+      <h1>{activeFamily.familyName}</h1>
       <h2>Parents</h2>
 
       {/* Pass data down as a prop */}
@@ -21,7 +21,7 @@ export default function FamilyTree(props) {
       <h2>Siblings</h2>
 
       {/* Siblings will consume data from Context using render props */}
-      <Siblings family={family} />
+      <Siblings />
     </section>
   );
 }
