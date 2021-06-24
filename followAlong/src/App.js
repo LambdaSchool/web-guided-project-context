@@ -20,7 +20,7 @@ export default function App() {
   // Step 2: Provide the contenxt by wrapping Context.Provider around the subtree of components (aka the context) in which this shared state is relevant
   return (
     <div className="App">
-      <FamilyContext.Provider value={{activeFamily, families}}>
+      <FamilyContext.Provider value={[state, dispatch]}>
       <section className="header">
         <h1>Family Trees</h1>
         {state.families.map(d => (
