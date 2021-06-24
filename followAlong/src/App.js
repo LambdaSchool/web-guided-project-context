@@ -17,14 +17,7 @@ export default function App() {
       <section className="header">
         <h1>Family Trees</h1>
         {families.map(d => (
-          <button
-            className={`family-button ${d.familyName ===
-              activeFamily.familyName && "active"}`}
-            key={d.familyName}
-            onClick={() => setActiveFamily(d)}
-          >
-            {d.familyName}
-          </button>
+          <Button activeFamily={activeFamily} family={d} setActiveFamily={setActiveFamily} />
         ))}
       </section>
       {activeFamily && <FamilyTree />}
