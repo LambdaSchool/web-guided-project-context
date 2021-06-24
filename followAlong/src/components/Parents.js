@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import FamilyContext from '../contexts/FamilyContext';
 
 const Parents = () => {
-  const family = useContext(FamilyContext).activeFamily;
+  const { activeFamily } = useContext(FamilyContext);
   return (
     <section className="parents">
       {family.parents.map(p => (
