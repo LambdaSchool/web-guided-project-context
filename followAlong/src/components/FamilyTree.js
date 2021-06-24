@@ -15,7 +15,7 @@ export default function FamilyTree(props) {
       <h2>Parents</h2>
 
       {/* Pass data down as a prop */}
-      <Parents family={family} />
+      <Parents />
 
       <div className="spacer" />
       <h2>Siblings</h2>
