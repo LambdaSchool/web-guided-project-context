@@ -17,7 +17,7 @@ export default function App() {
       <section className="header">
         <h1>Family Trees</h1>
         {families.map(d => (
-          <FamilyButton key={d} activeFamily={activeFamily} family={d} setActiveFamily={setActiveFamily} />
+          <FamilyButton key={d.familyName} activeFamily={activeFamily} family={d} setActiveFamily={setActiveFamily} />
         ))}
       </section>
       {activeFamily && <FamilyTree />}
