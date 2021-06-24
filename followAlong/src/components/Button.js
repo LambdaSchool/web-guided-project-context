@@ -1,6 +1,6 @@
 import React from "react"
 
-export default function Button = (props) => {
+const Button = (props) => {
   return (
     <button
       className={`family-button ${props.family.familyName ===
@@ -12,6 +12,8 @@ export default function Button = (props) => {
     </button>
       )
 }
+
+export default Button;
 
 // Props needed for this to work:
 // family, activeFamily (read)
