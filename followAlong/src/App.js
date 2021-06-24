@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import FamilyButton from "./components/FamilyButton";
 import { data } from "./data";
+import familyReducer from "./reducers";
 
 import FamilyTree from "./components/FamilyTree";
 import "./styles.scss";
@@ -8,7 +9,8 @@ import FamilyContext from "./contexts/FamilyContext";
 
 export default function App() {
   const [families] = useState(data);
-  const [activeFamily, setActiveFamily] = useState(families[0]);
+  const [state, dispatch] = useReducer(familyReducer, families[0]);
+  // const [activeFamily, setActiveFamily] = useState(families[0]);
 
   // Step 2: Provide the contenxt by wrapping Context.Provider around the subtree of components (aka the context) in which this shared state is relevant
   return (
