@@ -2,7 +2,8 @@ import React, { useContext } from "react"
 import FamilyContext from "../contexts/FamilyContext";
 
 const FamilyButton = (props) => {
-  const { activeFamily, setActiveFamily } = useContext(FamilyContext);
+  const { activeFamily } = useContext(FamilyContext).state; // like useSelector
+  const dispatch = useContext(FamilyContext).dispatch; // like useDispatch
   const { family } = props;
   return (
     <>
