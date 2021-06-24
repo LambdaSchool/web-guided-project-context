@@ -3,15 +3,16 @@ import FamilyContext from "../contexts/FamilyContext";
 
 const FamilyButton = (props) => {
   const { activeFamily, setActiveFamily } = useContext(FamilyContext);
+  const { family } = props;
   return (
     <>
     <button
-      className={`family-button ${props.family.familyName ===
+      className={`family-button ${family.familyName ===
         activeFamily.familyName && "active"}`}
-      key={props.family.familyName}
-      onClick={() => setActiveFamily(props.family)}
+      key={family.familyName}
+      onClick={() => setActiveFamily(family)}
     >
-      {props.family.familyName}
+      {family.familyName}
       </button>
     </>
   )
