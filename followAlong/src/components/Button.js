@@ -10,7 +10,7 @@ const Button = (props) => {
     >
       {props.family.familyName}
     </button>
-      )
+  )
 }
 
 export default Button;
