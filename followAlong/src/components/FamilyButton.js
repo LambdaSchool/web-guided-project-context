@@ -11,7 +11,7 @@ const FamilyButton = (props) => {
       className={`family-button ${family.familyName ===
         activeFamily.familyName && "active"}`}
       key={family.familyName}
-      onClick={() => setActiveFamily(family)}
+        onClick={() => dispatch({type: "SET_ACTIVE_FAMILY", payload: family})}
     >
       {family.familyName}
       </button>
