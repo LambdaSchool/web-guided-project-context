@@ -6,9 +6,9 @@ class Siblings extends React.Component {
     return (
       <section className="parents">
         <FamilyContext.Consumer>
-          {family => (
+          {value => (
             <>
-              {family.siblings.map((p) => (
+              {value.activeFamily.siblings.map((p) => (
                 <div className="person" key={p.name}>
                   <img width="150" src={p.img} alt={p.name} />
                   <strong>{p.name}</strong>
