@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import Button from "./components/Button";
 import { data } from "./data";
 
 import FamilyTree from "./components/FamilyTree";
@@ -17,7 +17,7 @@ export default function App() {
       <section className="header">
         <h1>Family Trees</h1>
         {families.map(d => (
-          <Button activeFamily={activeFamily} family={d} setActiveFamily={setActiveFamily} />
+          <Button key={d} activeFamily={activeFamily} family={d} setActiveFamily={setActiveFamily} />
         ))}
       </section>
       {activeFamily && <FamilyTree />}
