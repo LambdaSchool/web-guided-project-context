@@ -5,8 +5,10 @@ export default function Button = (props) => {
     <button
       className={`family-button ${d.familyName ===
         activeFamily.familyName && "active"}`}
-      key={d.familyName}
+      key={props.familyName}
       onClick={() => setActiveFamily(d)}
     >
+      {props.familyName}
+    </button>
       )
 }
