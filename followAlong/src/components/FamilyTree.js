@@ -3,6 +3,9 @@ import React, { useContext } from "react";
 import Parents from "./Parents";
 import Siblings from "./Siblings";
 
+// Step 3: consume the context in each component
+// (this is similar to what we do with connect or React Redux hooks)
+
 export default function FamilyTree(props) {
   return (
     <section className="FamilyTree">
