@@ -2,6 +2,7 @@ import React from "react"
 
 const FamilyButton = (props) => {
   return (
+    <>
     <button
       className={`family-button ${props.family.familyName ===
         activeFamily.familyName && "active"}`}
@@ -9,7 +10,8 @@ const FamilyButton = (props) => {
       onClick={() => props.setActiveFamily(props.family)}
     >
       {props.family.familyName}
-    </button>
+      </button>
+    </>
   )
 }
 
