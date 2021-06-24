@@ -10,6 +10,8 @@ export default function App() {
   const [families] = useState(data);
   const [activeFamily, setActiveFamily] = useState(families[0]);
 
+  console.log("What is a Context?", FamilyContext);
+
   return (
     <div className="App">
       <section className="header">
