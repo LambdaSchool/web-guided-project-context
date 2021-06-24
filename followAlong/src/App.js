@@ -14,6 +14,7 @@ export default function App() {
 
   return (
     <div className="App">
+      <FamilyContext.Provider>
       <section className="header">
         <h1>Family Trees</h1>
         {families.map(d => (
@@ -27,7 +28,8 @@ export default function App() {
           </button>
         ))}
       </section>
-      {activeFamily && <FamilyTree family={activeFamily} />}
+        {activeFamily && <FamilyTree family={activeFamily} />}
+      </FamilyContext.Provider>
     </div>
   );
 }
