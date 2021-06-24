@@ -3,12 +3,12 @@ import React from "react"
 export default function Button = (props) => {
   return (
     <button
-      className={`family-button ${d.familyName ===
+      className={`family-button ${props.family.familyName ===
         activeFamily.familyName && "active"}`}
       key={props.familyName}
-      onClick={() => setActiveFamily(d)}
+      onClick={() => setActiveFamily(props.family)}
     >
-      {props.familyName}
+      {props.family.familyName}
     </button>
       )
 }
