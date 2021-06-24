@@ -27,7 +27,7 @@ export default function App() {
           <FamilyButton key={d.familyName} family={d} />
         ))}
       </section>
-      {activeFamily && <FamilyTree />}
+      {state.activeFamily && <FamilyTree />}
       </FamilyContext.Provider>
     </div>
   );
