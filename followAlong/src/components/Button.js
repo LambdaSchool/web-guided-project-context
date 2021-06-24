@@ -1,6 +1,6 @@
 import React from "react"
 
-const Button = (props) => {
+const FamilyButton = (props) => {
   return (
     <button
       className={`family-button ${props.family.familyName ===
@@ -13,7 +13,7 @@ const Button = (props) => {
   )
 }
 
-export default Button;
+export default FamilyButton;
 
 // Props needed for this to work:
 // family, activeFamily (read)
