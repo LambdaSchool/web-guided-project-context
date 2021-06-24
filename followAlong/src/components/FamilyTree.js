@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import FamilyContext from "../contexts/FamilyContext";
 
 import Parents from "./Parents";
 import Siblings from "./Siblings";
@@ -7,6 +8,7 @@ import Siblings from "./Siblings";
 // (this is similar to what we do with connect or React Redux hooks)
 
 export default function FamilyTree(props) {
+  const family = useContext(FamilyContext);
   return (
     <section className="FamilyTree">
       <h1>{props.family.familyName}</h1>
